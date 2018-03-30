@@ -1,0 +1,86 @@
+.navbar {
+  background-color: $bg-navbar;
+  box-shadow: 0 2px 2px -2px rgba(217, 217, 217, .9);
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-bottom:2px;
+  margin-left: auto;
+  margin-right: auto;
+
+  .navbrand {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: auto auto;
+  }
+
+  .nav-link {
+    position: relative;
+    text-decoration: none;
+    padding: 0.5em 3em;
+    text-transform: uppercase;
+    font-weight: 900;
+    display: inline-block;
+    color: $white;
+
+    &:hover {
+      cursor: default;
+      color: #666666;
+    }
+    .active {
+      color: #666666;
+    }
+  }
+}
+
+
+//Hover Underline Effect
+// .nav-link {
+//   position: relative;
+//   text-transform: uppercase;
+//   text-decoration: none;
+//   padding-bottom: 8px;
+
+//   &:before,
+//   &:after {
+//     content: '';
+//     position: absolute;
+//     bottom: 2px;
+//     left: 0;
+//     right: 0;
+//     height: 2px;
+//     background-color: $red;
+//   }
+//   &:before {
+//     opacity: 0;
+//     transform: translateY(- $distance);
+//     transition: transform 0s $easeOutBack, opacity 0s;
+//   }
+//   &:after {
+//     opacity: 0;
+//     transform: translateY($distance/2);
+//     transition: transform $duration $easeOutBack, opacity $duration;
+//   }
+//   &:hover,
+//   &:focus,
+//   &:active {
+//     &:before,
+//     &:after {
+//       opacity: 1;
+//       transform: translateY(0);
+//     }
+//     &:before {
+//       transition: transform $duration $easeOutBack, opacity $duration;
+//     }
+//     &:after {
+//       transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
+//     }
+//   }
+// }

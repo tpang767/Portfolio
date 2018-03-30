@@ -1,15 +1,29 @@
-// The Vue build version to load with the `import` command
-// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
+// Vue
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import store from './store';
 
-Vue.config.productionTip = false
+// External Lib
+import 'animate.css/animate.min.css'
+
+/* App sass */
+import './assets/styles/app.scss'
+// import './assets/styles/simplegrid/simple-grid.scss'
+
+// Plugins
+import VueCollapse from 'vue2-collapse'
+// import { VueExtendLayout, layout } from 'vue-extend-layout'
+
+Vue.use(VueCollapse)
+// Vue.use(VueExtendLayout)
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
+  store,
+  // ...layout,
   components: { App },
   template: '<App/>'
 })

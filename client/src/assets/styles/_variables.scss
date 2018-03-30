@@ -1,0 +1,27 @@
+//colors
+$white: #fff;//backgrounds
+$lightgrey:rgb(217, 217, 217);
+$red: #F37272;
+$black: black;
+$darkslategray: rgb(74,84,95);
+$bg-body: $black;
+$bg-navbar: $black;
+
+$bg-sidebar: $white;
+$bg-main: $white;
+$borderColor: #eee;
+$bgColor: $black;
+
+$font-family-base: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-size-base: 14px !default;
+$line-height-base: 1.428571429 !default;
+$text-color: white;
+
+
+//Navbar Animations
+$duration: 0.5s;
+$distance: 8px;
+$easeOutBack: cubic-bezier(0.175,
+0.885,
+0.320,
+1.275);
