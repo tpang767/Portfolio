@@ -1,18 +1,87 @@
-// .container {
-//   padding-left: 15px;
-//   padding-right: 15px;
-//   margin-right: auto;
-//   margin-left: auto;
-// }
+.app-body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr minmax(40px, auto);
+    grid-template-areas: "content" "footer";
+  
+    header {
+        grid-area: header;
+    }
+  
+    nav {
+        grid-area: nav;
+    }
+  
+    main {
+        grid-area: content;
+    }
+  
+    footer {
+        grid-area: footer;
+    }
+  }
 
-.grid {
-   display: grid;
-  &.col-2{
-    grid-template-columns: 1fr 3fr;
+
+  @media (max-width: 375px) {
+    .app-body {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto 1fr auto;
+      grid-template-areas: "header" "nav" "content" "footer";
+  
+      nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        margin: 0;
+  
+        a.item {
+          display: none;
+          padding: 0.5em 1em;
+        }
+  
+        a.item:hover::after {
+          width: 25%;
+        }
+  
+        a.menu-toggle {
+          text-decoration: none;
+          font-size: 1.5em;
+          padding: 0.5em 0.8em;
+          color: $light-grey;
+          float: left;
+          display: block;
+  
+          &:hover {
+            -webkit-transform: translate3d(0, 0, 0);
+            cursor: pointer;
+            color: white;
+            font-weight: 900;
+          }
+        }
+      }
+  
+      main {
+        max-width: 100vw;
+  
+  
+        section {
+          padding: 1em;
+          flex-direction: column;
+        }
+        /* 
+            * * Landing */
+        #landing {
+          flex-direction: column;
+        }
+  
+        /* 
+            * * Projects */
+        #projects {}
+  
+        /* 
+            * * About */
+        #about {}
+      }
+    }
   }
-  .column {
-    display: flex;
-    flex-direction: column;
-    justify-content: stretch;
-  }
-}

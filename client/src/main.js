@@ -3,7 +3,11 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import store from './store';
+import VueScrollTo from 'vue-scrollto'
+import NxCard from 'nx-card'
 
+Vue.use(NxCard)
+Vue.use(VueScrollTo)
 // External Lib
 import 'animate.css/animate.min.css'
 

@@ -7,7 +7,6 @@ import Home from '@/pages/Home'
 import Projects from '@/pages/Projects'
 import Contact from '@/pages/Contact'
 import About from '@/pages/About'
-import Project from '@/pages/Project'
 
 Vue.use(Router)
 
@@ -27,11 +26,11 @@ export default new Router({
       name: 'Projects',
       component: Projects
     },
-    {
-      path: '/projects/:name',
-      name: 'Project',
-      component: Project
-    },
+    // {
+    //   path: '/projects/:name',
+    //   name: 'Project',
+    //   component: Project
+    // },
     {
       path: '/contact',
       name: 'Contact',

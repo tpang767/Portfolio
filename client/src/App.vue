@@ -1,165 +1,199 @@
 <template>
   <div id="app">
-    <div class="container">
-      <nav class="sidenav animated fadeInDown">
-        <!--<div class="navbrand">
+    <AppBody>
+      <AppNav :items="sections"/>
+      <AppMain>
+        <LandingSection/>
+        <ProjectSection :items="projects">
+          <div slot-scope="row">
 
-                                                                                </div>-->
-        <div class="profile">
-          <img src="./assets/images/avatar.png" class="avatar">
-          <h3>Thomas Pang</h3>
-          <h4>Web Developer</h4>
-        </div>
-        <div class="nav-items">
-          <router-link :to="{name: 'Home'}">
-            Home
-          </router-link>
-          <router-link :to="{name: 'Projects'}">
-            Projects
-          </router-link>
-          <router-link :to="{name: 'About'}">
-            About
-          </router-link>
-          <router-link :to="{name: 'Contact'}">
-            Contact
-          </router-link>
-        </div>
-      </nav>
-
-      <main class="main">
-        <router-view/>
-      </main>
-    </div>
-
+            <nx-card href="#">
+              <template slot="title">{{row.item.title}}</template>
+              <template slot="description">
+                <ul class="details" v-for="detail in row.item.details">
+                  <li>{{detail}}</li>
+                </ul>
+              </template>
+              <template slot="image">
+                <img :src="`${row.item.image}`">
+              </template>
+            </nx-card>
+            <!-- <Project :item="row.item"></Project> -->
+          </div>
+        </ProjectSection>
+        <ContactSection :items="contacts" />
+      </AppMain>
+      <AppFooter/>
+    </AppBody>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'App',
-  components: {
-
-  }
-}
-</script>
-
-<style lang="scss">
-@import './assets/styles/app.scss';
-
-@media only screen and (min-width: 768px) {
-  /* For desktop: */
-  .col-1 {
-    width: 8.33%;
-  }
-  .col-2 {
-    width: 16.66%;
-  }
-  .col-3 {
-    width: 25%;
-  }
-  .col-4 {
-    width: 33.33%;
-  }
-  .col-5 {
-    width: 41.66%;
-  }
-  .col-6 {
-    width: 50%;
-  }
-  .col-7 {
-    width: 58.33%;
-  }
-  .col-8 {
-    width: 66.66%;
-  }
-  .col-9 {
-    width: 75%;
-  }
-  .col-10 {
-    width: 83.33%;
-  }
-  .col-11 {
-    width: 91.66%;
-  }
-  .col-12 {
-    width: 100%;
-  }
-}
-
-
-#app {
-  height: 100%;
-  display: -ms-flexbox;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-box;
-  display: box;
-
-  -ms-flex-direction: row;
-  -webkit-box-orient: horizontal;
-  -moz-box-orient: horizontal;
-  -ms-box-orient: horizontal;
-  box-orient: horizontal;
-}
-
-.main {
-  -ms-flex: 1;
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
-  -ms-box-flex: 1;
-  box-flex: 1;
-}
-
-
-.navbrand {
-  background-image: url('./assets/images/logo.png');
-}
-
-main {
-  margin-left: 250px;
-}
-
-.sidenav {
-  border-right: 1px solid white;
-  height: 100vh;
-  width: 250px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  transition: 0.5s;
-  .navbrand {
-    display: block;
-    border: 1px solid white;
-    width: 100%;
-    height: 50px;
-    background-repeat: no-repeat;
-    background-position: 5% 50%;
-    background-size: auto auto;
-  }
-  .profile {
-    padding: 2em 0 2em 0;
-    display: block;
-    width: 100%;
-    text-align: center;
-    .avatar {
-      border-radius: 50%;
-    }
-  }
-  .nav-items {
-    >a {
-      padding: 8px 8px 8px 3em;
-      text-decoration: none;
-      font-size: 25px;
-      color: #818181;
-      display: block; // border: 1px solid white;
-      transition: 0.3s;
-      &:hover {
-        color: #f1f1f1;
+  import Project from './components/Projects/Project.vue'
+  import Projects from './pages/Projects.vue'
+  import Landing from './pages/Landing.vue'
+  import Contact from './pages/Contact.vue'
+  //Layouts
+  import Navbar from './components/Layout/Navbar.vue'
+  import Footer from './components/Layout/Footer.vue'
+  import AppBody from './components/Layout/AppBody.vue'
+  import Main from './components/Layout/Main.vue'
+  
+  //data
+  import api from './api'
+  
+  export default {
+    name: 'App',
+    components: {
+      Project,
+      'AppNav': Navbar,
+      'AppFooter': Footer,
+      'AppBody': AppBody,
+      'AppMain': Main,
+      'ProjectSection': Projects,
+      'LandingSection': Landing,
+      'ContactSection': Contact
+    },
+    created() {
+        window.addEventListener('scroll', this.handleScroll);
+    },
+    created() {
+      this.contacts = api.contacts
+      this.projects = api.projects
+      this.sections = api.sections
+    },
+    data() {
+      return {
+        contacts: '',
+        projects: '',
+        sections: '',
+        isOpen: false
+      }
+    },
+    methods: {
+      toggleMenu() {
+        this.isOpen = !this.isOpen;
+      },
+      handleScroll(e) {
+        console.log(e)
+        this.scrollY = e;
       }
     }
   }
-}
+</script>
+
+<style lang="scss">
+  @import './assets/styles/app.scss';
+</style>
+
+<style lang="scss">
+  $off-white: rgb(250, 250, 250);
+  $bg-app: $off-white;
+  $bg-color: $off-white;
+  $bg-navbrand: $bg-app;
+  $bg-header: white;
+  $bg-nav: black;
+  $bg-landing: transparent;
+  $text-primary: black;
+  $text-inverted: white;
+  $shadow: 0 2px 4px -1px rgba(0, 0, 0, .2),
+  0 4px 5px 0 rgba(0, 0, 0, .14),
+  0 1px 10px 0 rgba(0, 0, 0, .12);
+  
+  #main {
+    display: flex;
+    flex-direction: column;
+    margin-left:auto;
+    margin-right:auto;
+    #landing {
+      order: 1;
+    }
+    
+    #projects {
+      background-color:rgb(242,242,242);
+      padding:5em;
+      order: 2;
+
+      .project {
+        margin-bottom: 3em;
+      }
+      >.project:not(:last-child) {
+        margin-bottom: 3em;
+      }
+    }
+
+    #contact {
+      order: 3;
+    }
+  }
+  
+    //sections
+  .section {
+    background-color: white;
+    // border: 1px solid black;
+    padding: 3em;
+    min-height: 100vh;
+    .title {
+      text-align:center;
+      // border:1px solid black;
+      font-size: 2em;
+      font-weight:900;
+      text-transform: uppercase;
+    }
+  }
+
+  .app-body {
+    header {}
+    nav {}
+    main {}
+    footer {}
+  }
+  
+  .profile-pic {
+    margin: 0;
+    .avatar {
+      border-radius: 100%;
+      height: 200px;
+      width: 200px;
+    }
+  }
+  
+  .header {
+    letter-spacing: 0.1em;
+    &.txt-1 {
+      font-size: 2em;
+      line-height: 2em;
+      font-weight: 900;
+    }
+    &.txt-2 {
+      font-size: 1.8em;
+      line-height: 1.8em;
+    }
+    &.txt-3 {
+      font-size: 1.5em;
+      line-height: 1.5em;
+    }
+  }
+  
+  
+  /*
+     * * Shared Classes
+    */
+  
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+  }
+  
+
+  
+  .shadow {
+    -webkit-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2), 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12);
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2), 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12);
+  }
+  
+  .bg-cover {
+    background: $background-img repeat 0 0;
+  }
 </style>

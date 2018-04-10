@@ -1,31 +1,51 @@
 <template>
-  <div class="animated fadeIn">
-    <div class="row">
-      <div class="col-12">
-        <div class="jumbotron">
-          <p class="text-style-1">
-            Hello,
-          </p>
-          <p class="text-style-1">
-            My name is thomas and I am a web developer
-          </p>
-          <p class="text-style-1">
-            Feel free to explore my work.
-          </p>
-          <p class="text-style-1" style="text-align:right">
-            Enjoy!
-          </p>
-        </div>
-      </div>
-      </row>
-      <div class="row">
-        <div class="col-12" style="text-align:left; padding: 0 6em;">
-          <router-link :to="{name: 'About'}" class="button" style="margin-left:auto;">About Me</router-link>
-          <router-link :to="{name: 'Projects'}" class="button" style="margin-left:auto;">View Projects</router-link>
-        </div>
-      </div>
+  <div id="landing">
+    <div class="jumbotron">
+      <img src="../assets/images/avatar.png" class="profile-pic">
+      <p class="text-style-1">
+        Hello,
+      </p>
+      <p class="text-style-1">
+        My name is thomas pang and
+      </p>
+      <p class="text-style-1">
+        I am a web developer from New York City
+      </p>
+      <hr>
+      <p class="text-style-1">
+        Feel free to explore my work
+      </p>
+      <p class="text-style-1" style="float:right">
+        Cheers!
+      </p>
     </div>
   </div>
+  <!-- <div class="content">
+      <div class="left">
+        left
+
+      </div>
+      <div class="right">
+        right
+      </div>
+        
+        <nav class="sidebar">
+          <div class="profile">
+            <div class="avatar">
+              <img src="./assets/images/avatar.png" class="profile-pic">
+            </div>
+            <div class="title">
+              Thomas Pang
+            </div>
+            <div class="subtitle">
+              Web Developer
+            </div>
+          </div>
+          <div class="nav-menu">
+         
+          </div>
+        </nav>
+    </div> -->
 </template>
 
 <script>
@@ -52,36 +72,31 @@ export default {
 </script>
 
 <style scoped lang='scss'>
-.grid {
-  display: grid;
-  grid-template-columns: repeat(12, fr);
-  grid-template-rows: auto auto;
-  .section1 {
-    grid-column: span 8;
-    grid-row: 1/1;
-  }
-  .section2 {
-    grid-column: span 8;
-    grid-row: 1/1;
+#landing {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  .jumbotron {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
-// .grid-container {
-//   display: grid;
-//   grid-template-columns: repeat(12, 1fr);
-//   grid-template-rows: auto auto;
-//   .section {
-//     grid-column: span 12;
-//   }
-// }
-.text-style-1 {
-  font-family: 'PT Sans';
-  letter-spacing: 0.2em;
-  font-size: 1.2em;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  font-weight: 900;
+.content {
+  .left {
+    background-color: blue;
+    flex: 0.5;
+  }
+  .right {
+    background-color: red;
+    flex: 0.5;
+  }
 }
+
+
+
+
 
 .button {
   text-decoration: none;

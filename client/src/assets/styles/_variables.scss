@@ -1,21 +1,33 @@
 //colors
 $white: #fff;//backgrounds
+$slateBlue: #587B7F;
+$purple: #644E5B;
+$darkred: #9E5A63;
+$grey: #3B4349;
+$darkblue: #00216D;
+$teal: #39BBB1;
+$seaBlue: #8DFFC7;
+$yellow: #E2C044;
+$red: #C96567;
+$blue: #005693;
 $lightgrey:rgb(217, 217, 217);
-$red: #F37272;
 $black: black;
 $darkslategray: rgb(74,84,95);
-$bg-body: $black;
-$bg-navbar: $black;
+$neon-blue: #454ADE;
+$dark-blue: #1B1F3B;
+$light-black: #1C2023;
+$light-grey: #D3D0CB;
+$dark-green: rgb(12, 64, 63);
+$turqoise: #587B7F;
+$light-purp: #B14AED;
+$tron: #6a7989;
 
-$bg-sidebar: $white;
-$bg-main: $white;
-$borderColor: #eee;
-$bgColor: $black;
-
-$font-family-base: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-1: 'PT Sans', 'Raleway', 'Vollkorn';
+$font-family-2:'Raleway', sans-serif;
+$font-family-base: $font-family-1;
 $font-size-base: 14px !default;
 $line-height-base: 1.428571429 !default;
-$text-color: white;
+$text-color:black;
 
 
 //Navbar Animations
