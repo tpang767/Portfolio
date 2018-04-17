@@ -1,5 +1,6 @@
 <template>
     <section id="landing" class="section animated fadeIn">
+
             <div class="introduction">
             <div class="jumbotron">
                 <div class="header txt-1" style="text-transform:uppercase;">

@@ -1,19 +1,18 @@
+//
 @import "variables";
-//Globals
-@import "animations";
 @import 'global';
-@import "bgcover";
 
-//Layout
-@import 'grid';
+@import 'flex-base';
+@import 'flex-layout';
+
+@import './sections/sections';
+
+@import 'sidebar';
 @import 'navbar';
-@import 'footer';
-// @import "global";
-
-//Components
-@import 'jumbotron';
-
-// @import "typography";
 
 
+// @import 'about';
+
+
+// @import 'landing';
 

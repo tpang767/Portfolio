@@ -21,16 +21,16 @@ button.btn {
   outline: none;
   height: 40px;
   text-align: center;
-  width: 130px;
-  border-radius:40px;
-  background: #fff;
+  // width: 130px;
+  // border-radius:40px;
+  background: transparent;
   border: 2px solid black;
   color:black;
   letter-spacing:1px;
   text-shadow:0;
 
   font:{
-    size: 1.1em;
+    size: 0.9em;
     weight:bold;
   }
   cursor: pointer;
