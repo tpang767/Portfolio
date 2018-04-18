@@ -4,6 +4,7 @@ import Router from 'vue-router'
 
 //Pages
 import Home from '@/components/Pages/Home'
+import Landing from '@/components/Pages/Landing'
 // import Home from '@/pages/Home'
 // import Projects from '@/pages/Projects'
 // import Contact from '@/pages/Contact'

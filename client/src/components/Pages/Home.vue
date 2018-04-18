@@ -1,118 +1,86 @@
 <template>
-    <div id='home-page' class="pg-container">
-        <div class="pg-grid jumbotron">
-            <div class="content-box b1">
+    <div id="homepage" class="pg-flex animated fadeIn fullpage">
+        <div class="pg-container jumbotron animated bg-cover">
+            <div class="header">
+                <h1 style="margin-bottom:20px; color:white;">Hello,</h1>
+                <h1>my name is <span class="black">thomas </span>and</h1>
+                <h1>i am a <span class="black">web developer</span></h1>
             </div>
-            <div class="content-box b2">
-            </div>
-            <div class="content-box b3">
-                <p class="text-box">
-                    As a web developer with a deep passion for learning, mission-driven work ethic, and versatile approach towards problem-solving, my mission is to deliver high-quality products with long term scalability in mind. My philosophy to use a modular approach
-                    which focuses both on attention to detail and overall macro objectives.
-                </p>
-            </div>
-            <div class="content-box b4">
-            </div>
-        </div>
-        <div class="pg-divider">
-        </div>
-        <div class="pg-section">
-            <Skills :skills="skills"></Skills>
-            <Projects :projects="projects"></Projects>
-            <Contacts :contacts="contacts"></Contacts> 
         </div>
     </div>
 </template>
 
 <script>
-    import api from '../../api';
-    import Projects from '../Projects';
-    import Skills from '../Skills';
-    import Contacts from '../Contacts';
-    export default {
-        name: 'HomePage',
-        components: {
-            Projects,
-            Skills,
-            Contacts
-        },
-        data() {
-            return {
-                projects: '',
-                contacts: '',
-                sections: '',
-            }
-        },
-        created() {
-            this.skills = api.skills
-            this.contacts = api.contacts
-            this.projects = api.projects
-            this.sections = api.sections
-        },
-    
-    
-    }
+export default {
+    name: 'Home'
+}
 </script>
 
 <style lang="scss">
-    .pg-grid {
-        display: grid;
+#homepage{
+    background:black;
+}
+@keyframes animateBackground {
+    from { background-position: 0 0; }
+    to { background-position: -1920px; }
+}
+.bg-cover {
+    background-position:50% 50% !important;
+    background-size: cover !important;
+    overflow:hidden;
+    width: 100%;
+    height: 100%;
+    background: url('../../assets/images/backgrounds/particles.jpg');
+    &.animated {
+        animation: animateBackground 60s linear infinite;
     }
-    
-    .pg-container {
-        width: 100%;
-        height: 100%;
+    &.particles {
+        width:1920px;
+        // background-size: 400px auto;
+        background: url('../../assets/images/backgrounds/particles.jpg') repeat;
+    }
+}
 
-        .pg-section {
-            background:rgb(255,252,220);
-        }
-
-        .pg-divider{
-            height: 100px;
-            // background:rgb(252,97,92);
-        }
-
-        .jumbotron {
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: repeat(4, 1fr);
-            min-height:500px;
+.align-center{
+    align-items:center;
+}
+.justify-center{
+    justify-content:center;
+}
+.centered{
+   justify-content:center;
+   align-items:center; 
+}
+.black{
+    color: rgb(248, 248, 248);
+    // color:white;
+    // color:black;
+}
+.white{
+    color:white;
+}
+.jumbotron {
+    display:flex;
+   justify-content:center;
+   align-items:center;
+//    text-align:center;
+    .header{
+        padding:2vw;
+        border:3px solid white;
+        >* {
+            text-transform:uppercase;
+            font-weight:900;
+            color: #2c3e50;
+            letter-spacing:10px;
+            margin:0;
         }
     }
-    
-    .jumbotron {
-        background-position: 50% 50% !important;
-        background-size: cover !important;
-        width: 100%;
-        background: url('../../assets/images/backgrounds/bg-ocean.png');
-        .content-box{
-            display: flex;
-            padding: 1vw;
-            justify-content: center;
-            align-items: center;
-        }
 
-            .b1 {
-                grid-column: 1 / span 2;
-                grid-row: span 2;
-            }
-            .b2 {
-                grid-column: 3 / span 2;
-                grid-row: span 2;
-            }
-            .b3 {
-                grid-column: 1 / span 2;
-                grid-row: span 2;
-                align-self: flex-end;
-            }
-            .b4 {
-                grid-column: 3 / span 2;
-                grid-row: span 2;
-            }
-    }
-    
-    .flex-vertical-center {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+}
+   
+
+
+
+
+
 </style>
