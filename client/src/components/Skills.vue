@@ -18,17 +18,17 @@
 </template>
 
 <script>
-    export default {
-        name: 'Skills',
-        props: {
-            skills: {
-                type: Array,
-                default: () => []
-            }
-        }
+export default {
+  name: "Skills",
+  props: {
+    skills: {
+      type: Array,
+      default: () => []
     }
+  }
+};
 </script>
 
 <style>
-    
+
 </style>

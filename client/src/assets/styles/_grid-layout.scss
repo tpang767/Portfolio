@@ -1,78 +1,83 @@
 .pg-grid {
-    display: grid;
-}
-.pg-flex {
-    display: flex;
+  display: grid;
 }
 
-.pg-sidebar-container{
-    width:310px;
+
+.pg-grid-item{
+  // border:1px solid black;
+  &.banner{
+    grid-area: banner;
+    background: $slate-2;
+    color:$white;
+  }
+
+  &.header{
+    grid-area: header;
+    background: $white;
+  }
+
+  &.projects{
+    background: $grey-2;
+    grid-area: projects;
+  }
+
+  &.skills{
+    background: $blue-2;
+    grid-area: skills;
+  }
+
+  &.contact{
+    background: $slate-2;
+    grid-area: contact;
+  }
 }
 
-.pg-sidebar {
-    position: fixed;
-    background:white;
-    padding:30px;
-    height:100vh;
-    width:310px;
+.header{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  // align-items:center;
+  width:100%;
+  height:100%;
 
-    &.open {
-        margin-left: 0;
+  .intro{
+    flex: 1;
+  }
+
+  .main{
+    flex: 2;
+  }
+
+  .profile-img{
+    display:flex;
+    max-height:300px;
+    max-width:200px;
+    width:300px;
+    .img{
+      object-fit: cover;
+      max-width:100%;
+      height:auto;
     }
-
-    display: flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:stretch;
-    // justify-content:center;
+  }
 }
 
-.fullpage{
-    height:100vh;
-}
-
-.pg-grid.app{
-    background: rgb(248, 248, 248);
-}
-
-
-
-.pg-container {
-    padding: 2vw;
-}
-
-// &:not(.close) {
-//     width: 0; 
-//     transition: width 0.4s ease-in;
-//     &.open {
-//         width: 250px;
-//         transition: width 0.4s ease-out;
-//     }
-// }
-
-
+/* Small Screens */
 @media only screen and (max-width: 900px) {
 
-
-    .pg-sidebar {
-        // display: none;
-    }
-    
-    .sidebar-toggle{
-        display:initial;
-    }
-
 }
 
-@media only screen and (min-width: 901px) {
-    // .sidebar-toggle{
-    //     display:none;
-    // }
-    .pg-sidebar-container{
-        width: 310px;
-    }
+/* Large Screens */
+@media only screen and (min-width:901px) {
 
-    .pg-content{
-        flex: 1 0 auto;
-    }
+  .pg-grid {
+    grid-template-columns: repeat(5,20vw);
+    grid-template-rows: repeat(5,20vh);
+    grid-template-areas:
+    "banner banner banner banner banner"
+    "header header header projects skills"
+    "header header header projects skills"
+    "header header header projects contact"
+    "header header header projects contact";
+  }
+
 }
