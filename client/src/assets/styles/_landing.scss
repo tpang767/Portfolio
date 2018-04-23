@@ -1,0 +1,58 @@
+// .hero {
+//   flex: 1;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   .header,
+//   .subheader {
+//     display: flex;
+//     color: white;
+//     font-weight: 900;
+//     text-transform: uppercase;
+
+//     .title {
+//       padding: 0 1vw;
+
+//     }
+// }
+
+.jumbotron {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  .headlines > * {
+    display: flex;
+    color: white;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  .headlines {
+    h1 {
+      font-size: 5vw;
+      font-family: "Raleway", sans-serif;
+      letter-spacing: normal;
+      letter-spacing: 0.1em;
+      line-height: 4vw;
+    }
+
+    h2 {
+      font-family: "Roboto", sans-serif;
+      font-size: 2.5vw;
+      letter-spacing: 0.2em;
+    }
+  }
+}
+
+/* Small Screens */
+@media only screen and (max-width: 900px) {
+}
+
+/* Large Screens */
+@media only screen and (min-width: 901px) {
+}
