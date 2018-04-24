@@ -1,10 +1,12 @@
 @import "variables";
 @import "mixins";
 @import "global";
-@import "navbar";
-@import "projects";
-@import "skills";
-@import "flex-layout";
-@import "landing";
+// @import "navbar";
+// @import "projects";
+// @import "skills";
+@import "pg-layout";
+@import "pg-base";
+@import "pg-grid";
 
-// @import "grid-layout";
+// @import "landing";
+

@@ -9,10 +9,16 @@ html {
 }
 
 body {
-  overflow: auto;
-  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
   line-height: 1.5;
-  font-family: "Roboto", serif;
+  letter-spacing: .0312rem;
+  // background:#262626;
+  background: #000;
+  color: #262626;
+  overflow: auto;
+  // overflow-y: scroll;
 }
 
 html,
@@ -28,17 +34,29 @@ h4,
 h5,
 h6 {
   margin: 0;
-  font-family: "Raleway", sans-serif;
-  font-weight: bold;
+  font-weight: 400;
 }
 
+// h1{
+//   font-size:  3.125rem;
+// }
+// h2{
+//   font-size: 1.875rem;
+// }
+// h3{
+//   font-size: 1.125rem;
+// }
+// h4{
+//   font-size: .8125rem;
+// }
+// h5{
+//   font-size: .6875rem;
+// }
 p {
   margin: 0;
-  font-family: "Roboto", serif;
 }
 
 a {
-  font-family: "Raleway", sans-serif;
   color: inherit;
   text-decoration: none;
 }
@@ -51,4 +69,13 @@ ul {
 
 li {
   list-style-type: none;
+}
+
+
+
+
+
+.font-style-1{
+  font-size: 1rem;
+  letter-spacing:0.1rem;
 }

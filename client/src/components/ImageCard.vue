@@ -1,24 +1,26 @@
 <template>
-<div class="image-card">
-  <a :href="`${path}`">
-  <h1 class="title">{{title}}</h1>
-  <img class="thumbnail" :src="`${image}`" alt=""/>
+  <div class="image-card">
+    <a :href="`${path}`">
+      <h1 class="title">{{ title }}</h1>
+      <img
+        :src="`${image}`"
+        class="thumbnail"
+        alt="">
 
-  <div class="overlay">
-      <div class="caption"><p>{{caption}}</p></div>
+      <div class="overlay">
+        <div class="caption"><p>{{ caption }}</p></div>
+      </div>
+    </a>
   </div>
-  </a>
-
-</div>
 </template>
 
 <script>
 export default {
   name: 'ImageCard',
   props: {
-    title: "",
-    caption: "",
-    path: "",
+    title: '',
+    caption: '',
+    path: '',
     text: {
       type: String,
       default: 'Button'
@@ -35,8 +37,6 @@ export default {
 .image-card {
   position: relative;
   width: 100%;
-
-
 
   :hover .overlay{
 
@@ -92,7 +92,6 @@ export default {
     overflow: hidden;
 }
 
-
 .image-card  .title {
     position: absolute;
     width: 100%;
@@ -146,13 +145,5 @@ export default {
     justify-content: center;
     align-items: center;
   }
-
-
-
-
-
-
-
-
 
 </style>

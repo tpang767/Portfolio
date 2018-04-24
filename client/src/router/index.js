@@ -3,7 +3,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 // Pages
-import Home from '@/components/Pages/Home'
+import HomePage from '@/pages/HomePage'
 // import Home from '@/pages/Home'
 // import Projects from '@/pages/Projects'
 // import Contact from '@/pages/Contact'
@@ -20,17 +20,7 @@ export default new Router({
     {
       path: '/',
       name: 'Home',
-      component: Home
+      component: HomePage
     }
-    // {
-    //   path: '/projects/:name',
-    //   name: 'Project',
-    //   component: Project
-    // },
-    // {
-    //   path: '/projects',
-    //   name: 'Projects',
-    //   component: Projects
-    // },
   ]
 })

@@ -1,31 +1,16 @@
 .projects {
-  display: grid;
-  margin-left: auto;
-  margin-right: auto;
-  align-items: center;
-  padding: 3vw;
-  max-width: 1024px;
-  width: 100vw;
-  height: auto;
+
 }
 
 .project {
-  grid-column: span 1;
 }
 
 /* Small Screens */
 @media only screen and (max-width: 900px) {
-  .projects {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-  }
+
 }
 
 /* Large Screens */
 @media only screen and (min-width: 901px) {
-  .projects {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    grid-gap: auto;
-  }
+
 }
