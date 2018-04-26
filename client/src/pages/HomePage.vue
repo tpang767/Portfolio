@@ -1,32 +1,9 @@
 <template>
   <div class="grid-container">
 
-    <div class="header">
-      <div class="content-box">
-        <h2>Thomas Pang</h2>
-        <p>Welcome to my web development portfolio, a website which I designed and programmed myself entirely from scratch.
-        If you're interested in seeing my recent work or learning about me, feel free to explore around.
-        </p>
-        <div class="btn-group">
-          <a
-            href="#about"
-            class="raise button">
-            About Me
-          </a>
-          <a
-            href="#about"
-            class="raise button">
-            Recent Work
-          </a>
-        <!-- <div class="jumbotron"/> -->
-        </div>
-      </div>
-    </div>
-
     <!-- <div class="introduction section bg-fullblack">
       <div class="content-box ">
-        <p>      My name is Thomas and I am a fullstack web developer experienced in both frontend and backend development for
-        all kinds of web applications.</p>
+        <p>      </p>
 
       </div>
     </div> -->
@@ -237,35 +214,6 @@ export default {
   right:0;
   width:100%;
   height:100%;
-}
-
-.button {
-  font-family: "Roboto", sans-serif;
-  background:none;
-  border: 1px solid #1F3075;
-  font-size: .8125rem;
-  letter-spacing: .1em;
-  line-height: 1;
-  margin: 0.5em;
-  padding: 1em 2em;
-}
-.button {
-  color:white;
-  text-transform:uppercase;
-  transition: 0.25s;
-  font-size:bold;
-  &:hover,
-  &:focus {
-    border-color: white;
-    color: white;
-  }
-}
-/* GENERAL BUTTON STYLING */
-.raise:hover,
-.raise:focus {
-  box-shadow: 0 0.5em 0.5em -0.4em
-#1F3075;
-  transform: translateY(-0.25em);
 }
 
 </style>

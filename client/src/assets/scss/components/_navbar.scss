@@ -1,0 +1,52 @@
+
+
+.pf-navbar {
+  box-shadow: 0 0 0 4px rgba(66,48,58,0.08);
+  position: fixed;
+  text-align:center;
+  top: 0;
+  left:0;
+  z-index: 9999;
+  max-width:100vw;
+  width: 100%;
+  background-color: transparent;
+  height:150px;
+  line-height:150px;
+  -webkit-transition: height .5s, line-height .2s; /* Safari */
+  transition: height .5s;
+}
+
+.pf-navbar a {
+  color: $text-color-1;
+  display:inline-block;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: 700;
+  font-family: 'Raleway', sans-serif;
+  // text-transform: uppercase;
+  outline: none;
+  margin-right: 1em;
+
+  -webkit-transition: all .3s;
+    transition: all .3s;
+  &:hover {
+    color: $primary-color;
+    // box-shadow: 0 0.5em 0.5em -0.4em #1f3075;
+    transform: translateY(-0.25em);
+  }
+
+  &:active {
+    letter-spacing: 2px;
+  }
+}
+.pf-navbar.scrolled a {
+  font-size:1em;
+}
+
+
+.scrolled{
+  height: 75px !important;
+  line-height: 75px !important;
+  background-color:$white-1;
+  box-shadow: 0 0 0 4px rgba(66,48,58,0.08);
+}

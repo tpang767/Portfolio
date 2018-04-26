@@ -1,0 +1,41 @@
+.app {
+    display:flex;
+    flex-direction:column;
+    margin: 0 auto;
+    justify-content:center;
+    justify-content:space-between;
+    // position:relative;
+}
+.section--bordered {
+    border:30px solid $white-1;
+}
+
+.pf-sidebar{
+    background: grey;
+}
+
+.pf-grid{
+    display:grid;
+    justify-content:center;
+    align-items:center;
+    grid-template-columns: 1fr; 
+    grid-template-rows: auto;
+}
+
+.pf-navbar{
+}
+
+
+
+
+/* Small Screens */
+@media only screen and (max-width: 900px) {
+ 
+}
+  
+  /* Large Screens */
+  
+@media only screen and (min-width: 901px) {
+
+    
+}

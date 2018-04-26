@@ -1,34 +1,26 @@
 <template>
-<section id="contact" class="section">
-      <h1 class="title">Contact</h1>
-      <div class="contacts" v-for="item in items" :key="item.name" slot="content">
-        <div class="contact">
+      <div class="contacts" >
+        <div class="contact" v-for="item in items" :key="item.name" slot="content">
           <i class="fa-3x icon" :class="item.icon"></i>
           <a :href="`${item.value}`" class="link">{{item.value}}</a>
         </div>
       </div>
-  </section>
 </template>
 
 <script>
-  import Section from '../components/Layout/Section.vue'
-  
-  export default {
-    name: 'Contact',
-    component: {
-      't-section': Section
-    },
-    props: {
-      items: {
-        type: Array,
-        default: () => []
-      }
+
+export default {
+  name: 'Contact',
+  props: {
+    items: {
+      type: Array,
+      default: () => []
     }
   }
+}
 </script>
 
 <style lang="scss">
-  #contact {
     .contacts {
       display: flex;
       flex-direction: column;
@@ -41,13 +33,11 @@
         }
         .link {
           text-decoration: none;
-          color: $text-color;
-          font-size: 1.2em;
+          font-size: 1.2rem;
           width: auto;
           line-height: 45px;
-          transform-text: uppercase;
+          text-transform: uppercase;
         }
       }
     }
-  }
 </style>

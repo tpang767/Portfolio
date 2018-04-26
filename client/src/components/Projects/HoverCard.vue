@@ -8,7 +8,7 @@
         alt="" >
       <div class="overlay">
         <div class="caption">
-          <p>{{ caption }}</p>
+          <h4>{{ caption }}</h4>
         </div>
       </div>
     </a>
@@ -50,7 +50,6 @@ export default {
   width: 100%;
   display:flex;
   flex-wrap:wrap;
-  justify-content: center;
 }
 
 .hover-card:hover .overlay{
@@ -125,6 +124,7 @@ export default {
     position: absolute;
     height: 100%;
     width: 100%;
+    max-width:450px;
     top: 0;
     left: 0;
     visibility: hidden;
@@ -137,8 +137,7 @@ export default {
     display: inline-block;
     transform: translateY(-20px);
     transition: all .5 9s ease;
-    font-size: 1.125rem;
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.2rem;
     text-transform:uppercase;
     // background-colorblack;
 }
