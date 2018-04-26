@@ -4,17 +4,16 @@
 @import "base/normalize";
 @import "base/variables";
 @import "base/functions";
-@import "base/base-styles";
+// @import "base/base-styles";
 @import "base/utils";
+// @import 'vendors/skeleton';
+@import "base/boiler";
 @import "base/typography";
-@import "base/colors";
-@import 'vendors/skeleton';
+
 
 @import 'layouts/l-grid';
 @import 'layouts/l-default';
 
  /* Components. */
 @import 'components/navbar';
-@import 'components/hero';
-@import 'components/sections';
 

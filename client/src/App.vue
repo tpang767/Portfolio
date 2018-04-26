@@ -1,17 +1,12 @@
 <template>
 
   <div class="app section--bordered animated fadeIn">
-    <div id="navbar"
+    <!-- <div id="navbar"
          ref="navbar"
          :class="{ scrolled: scrolled }"
          class="pf-navbar sticky">
           <div class="row">
-            <!-- <div class="four columns"> -->
 
-          <!-- <img
-            src="./assets/images/brand/blue.png"
-            class="brand-logo"> -->
-            <!-- </div> -->
             <div class="eleven columns right-text">
                <scrollactive ref="scrollactive"
                     :offset="150"
@@ -25,9 +20,9 @@
            class="scrollactive-item">About</a>
         <a href="#skills"
            class="scrollactive-item">Skills</a>
-        <!-- <a
+        <a
           href="#contact"
-          class="scrollactive-item">Contact</a> -->
+          class="">Contact</a>
         <a href="#projects"
            class="scrollactive-item">Projects</a>
 
@@ -35,36 +30,35 @@
           </div>
 
           </div>
+    </div> -->
+    <section id="home" class="section home">
+      <div class="container">
+ <h1 class="headline-1">Thomas Pang</h1>
+          <h1 class="headline-2">Web Portfolio</h1>
+          <h3><em>Perfection [in design] is achieved, not when there is nothing more to add, but when there is nothing left to take away. - Antoine de Saint-Exupéry</em></h3>
+ <!-- <h1>Feel free to explore my work</h1> -->
+ <a class="button-primary button"
+             href="#">Recent Work</a>
+      </div>
 
-    </div>
-
-    <div id="home"
+      </section>
+    <!-- <div id="home"
          class="section home bg-img gears">
 
       <div class="container">
         <div class="row " style="margin-bottom:5rem;">
           <div class="one-half column">
             <brand-icon></brand-icon>
-
           </div>
           <div class="one-half column">
-             <!-- <paralax>
-              <img src="../static/images/500/sphere.png"
-class="background-image header">
-            </paralax> -->
-          <!-- <h1 class='headline jumbo'>Web Portfolio </h1> -->
+
           <div class="right-text">
 
- <h1 class='headline jumbo strong tight'>Thomas Pang</h1>
-          <h1 class='headline jumbo strong tight'>Web Developer</h1>
- <h3>Feel free to explore my work</h3>
- <a class="button-primary button"
-             href="#">Recent Work</a>
           </div>
 </div>
 </div>
       </div>
-    </div>
+    </div> -->
     <div id="banner"
          class="section narrow contact bg-img gears">
       <div class="inner-section">
@@ -217,9 +211,22 @@ export default {
 </style>
 <style lang='scss'>
 .section.home{
-  background-color: $white-3;
+  background-color: $white-2;
   color: $text-color-1;
-  // padding-top:5rem;
+  text-align:center;
+  max-width: 100%;
+  padding:12% 15% 2% 15%;
+}
+
+.headline-1{
+  font-size:24px;
+  letter-spacing: 1.15px;
+  font-weight: 400;
+}
+.headline-2{
+  font-size:26px;
+  letter-spacing: 3.53px;
+  font-weight: 400;
 }
 .section.two{
   color:$dark-1;
