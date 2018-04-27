@@ -1,18 +1,13 @@
 <template>
-  <div class="projects section bg-black">
-    <div
-      class="section-title large"
-      style="">Recent Work</div>
-    <template
-      v-for="
+  <div class="projects">
+      <div class="project" v-for="
       project in projects">
-      <div class="project">
 
         <div class="description">
-          <h3 class="project-title">
+          <h5 class="headline tight" style="margin-bottom:2rem;">
             {{ project.title }}
-          </h3>
-          <p>{{ project.description }}</p>
+          </h5>
+          <h6>{{ project.description }}</h6>
         </div>
         <div class="preview">
           <HoverCard
@@ -21,9 +16,6 @@
             :path="project.path"/>
         </div>
       </div>
-      <div class="divider"/>
-    </template>
-</h1>
   </div>
 </template>
 
@@ -58,42 +50,24 @@ export default {
 </script>
 
 <style lang="scss">
-.divider{
-  height:1px;
-  width: 95%;
-  margin:1rem auto;
-  background-color: $black-2;
-}
+
 .projects{
-  //  border-left:1px solid white;
-  //  border-right:2px solid $black-2;
+  flex:1;
 }
+
 .project{
   display:flex;
   flex-wrap: wrap;
-  justify-content:center;
+  // justify-content:center;
   padding: 1rem;
+  margin-bottom:3rem;
   // background: #262626;
-
+  // border:2px solid $primary-color;
 }
 .project:not(:last-child) {
   // margin-bottom:1em;
   // padding-bottom:2em;
   // border-bottom:1px solid $black;
-}
-
-.project .description {
-  .project-title {
-        font-family: "Roboto", sans-serif;
-        color:#1F3075;
-        // color:#47b784;
-        font-size: .6875rem;
-        line-height:1rem;
-        margin-bottom:1em;
-        letter-spacing: .1em;
-        text-transform: uppercase;
-        font-weight: normal;
-  }
 }
 
 /* Small Screens */
@@ -116,7 +90,7 @@ export default {
     flex:0.5;
   }
   .project .description{
-    margin-right:1em;
+    margin-right:2em;
   }
 }
 </style>

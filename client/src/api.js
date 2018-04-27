@@ -5,11 +5,11 @@ export default {
       items: [
         {
           name: 'HTML5',
-          img: 'http://andrewborstein.github.io/portfolio/static/img/html5.png'
+          image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/2000px-HTML5_logo_and_wordmark.svg.png'
         },
         {
           name: 'Pug',
-          img: 'https://avatars0.githubusercontent.com/u/9338635?s=200&v=4'
+          image: 'https://avatars0.githubusercontent.com/u/9338635?s=200&v=4'
         }
       ]
     },
@@ -18,23 +18,23 @@ export default {
       items: [
         {
           name: 'CSS3',
-          img: 'https://www.shareicon.net/download/2016/08/01/639873_internet.svg'
+          image: 'https://www.shareicon.net/download/2016/08/01/639873_internet.svg'
         },
         {
           name: 'Sass',
-          img: 'https://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg'
+          image: 'https://www.shareicon.net/download/2015/08/31/93776_sass_512x512.png'
         },
         {
           name: 'Bootstrap',
-          img: 'https://v4-alpha.getbootstrap.com/assets/brand/bootstrap-solid.svg'
+          image: 'https://getbootstrap.com/assets/img/bootstrap-stack.png'
         },
         {
           name: 'Bulma',
-          img: 'https://jgthms.com/web-design-in-4-minutes/bulma.png'
+          image: 'https://jgthms.com/web-design-in-4-minutes/bulma.png'
         },
         {
           name: 'Semantic Ui',
-          img: 'https://semantic-ui.com/images/logo.png'
+          image: 'https://semantic-ui.com/images/logo.png'
         }
       ]
     },
@@ -43,23 +43,43 @@ export default {
       items: [
         {
           name: 'Vue.js',
-          img: 'https://vuejs.org/images/logo.png'
+          image: 'https://vuejs.org/images/logo.png'
         },
         {
           name: 'Javascript',
-          img: 'https://cdn.worldvectorlogo.com/logos/javascript-1.svg'
+          image: 'https://cdn.worldvectorlogo.com/logos/javascript-1.svg'
         },
         {
           name: 'Jquery',
-          img: 'http://andrewborstein.github.io/portfolio/static/img/jquery.png'
+          image: 'https://wikiprogramming.org/wp-content/uploads/2016/10/jquery-icon.png'
         },
         {
           name: 'NodeJs',
-          img: 'https://nodejs.org/static/images/logo.svg'
+          image: 'https://nodejs.org/static/images/logo.svg'
+        }
+      ]
+    },
+    {
+      title: 'Developer Tools',
+      items: [
+        {
+          name: 'Github',
+          image: 'https://png.icons8.com/metro/1600/github.png'
+        },
+        {
+          name: 'BitBucket',
+          image: 'https://png.icons8.com/color/1600/bitbucket.png'
+        },
+        {
+          name: 'Webpack',
+          image: 'https://cdn-images-1.medium.com/max/400/1*l0JiZHyCBXtgeMQyhBpT6g.png'
+        },
+        {
+          name: 'MongoDB',
+          image: 'https://zdnet2.cbsistatic.com/hub/i/r/2016/11/02/c8355e96-d906-457f-a3ac-77ac3c0538d6/thumbnail/770x578/52b97356c653cbafd654592ebf06dca7/mongodb-logo.png'
         }
       ]
     }
-
   ],
   contacts: [
     { name: 'email', icon: 'far fa-envelope', text: 't.pang767@gmail.com'},

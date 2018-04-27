@@ -1,0 +1,78 @@
+// Variables
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+// Breakpoints
+$bp-larger-than-mobile    : "min-width: 400px" !default;
+$bp-larger-than-phablet   : "min-width: 550px" !default;
+$bp-larger-than-tablet    : "min-width: 750px" !default;
+$bp-larger-than-desktop   : "min-width: 1000px" !default;
+$bp-larger-than-desktophd : "min-width: 1200px" !default;
+
+// Colors
+$sea-green: #47b784 !default;
+$light-blue: #69e2ff !default;
+$blue: #00b0ff !default;
+$dark-blue: #0081cb !default;
+
+$yellow:#fec540;
+$yellow-light:#fff873;
+$yellow-dark:#c79500;
+
+$dark-grey: #333 !default;
+
+$dark-1: black;
+$dark-2: rgb(24,24,24);
+$text-color-1:black;
+
+$white-1: white;
+$white-2: #d3d3d3;
+$white-3: #f6f6f6;
+
+$purple-1:#2137e3;
+$purple-2: #4f64e6; 
+
+
+$grey: 
+#e2e2e2;
+
+$primary-dark:#0044c7;
+$primary-light: #6d9cff;
+$primary-primary: #166efb;
+
+$primary: $yellow;
+
+
+$background-grey:#e2e2e2;
+$deep-blue:#101727;
+$deep-blue-2:#171f32;
+$primary-color: $yellow !default;
+$secondary-color:#27e7c4;
+$border-color: #bbb !default;
+$link-color: $dark-grey !default;
+$font-color: black!default;
+
+// Typography
+$font-family-raleway: 'Raleway', 'Open Sans', 'Helvetica Neue', Helvetica, Helvetica, Arial, sans-serif !default;
+$font-family-opensans: 'Open Sans', 'Helvetica Neue', Helvetica, Helvetica, Arial, sans-serif;
+
+$font-family-base: $font-family-raleway !default;
+
+//Grid Variables
+$container-width: 960px !default;
+$container-width-larger-than-mobile: 85% !default;
+$container-width-larger-than-phablet: 80% !default;
+$total-columns: 12 !default;
+$column-width: 100 / $total-columns !default; // calculates individual column width based off of # of columns
+$column-margin: 4% !default; // space between columns
+
+// Misc
+$global-radius: 4px !default;
+
+
+$background-color: $white-1;
+// $jumbotron-padding:              30px !default;
+// $jumbotron-color:                inherit !default;
+// $jumbotron-bg:                   $gray-lighter !default;
+// $jumbotron-heading-color:        inherit !default;
+// $jumbotron-font-size:            ceil(($font-size-base * 1.5)) !default;
+// $jumbotron-heading-font-size:    ceil(($font-size-base * 4.5)) !default;

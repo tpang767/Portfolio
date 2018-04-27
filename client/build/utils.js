@@ -54,12 +54,11 @@ exports.cssLoaders = function (options) {
     }
   }
 
-
   let scssOptions = {
     includePaths: [
-      './src/assets/styles'
+      './src/assets/scss'
     ],
-    data: '@import "./src/assets/styles/app";'
+    data: '@import "./src/assets/scss/app";'
   }
 
   // https://vue-loader.vuejs.org/en/configurations/extract-css.html

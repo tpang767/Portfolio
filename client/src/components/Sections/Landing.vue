@@ -1,5 +1,5 @@
 <template>
-    <div id='home-page'>
+  <!-- <div id='home-page'>
         <div class="pg-grid jumbotron">
             <div class="content-box b1">
             </div>
@@ -7,8 +7,7 @@
             </div>
             <div class="content-box b3">
                 <p class="text-box">
-                    As a web developer with a deep passion for learning, mission-driven work ethic, and versatile approach towards problem-solving, my mission is to deliver high-quality products with long term scalability in mind. My philosophy to use a modular approach
-                    which focuses both on attention to detail and overall macro objectives.
+                  
                 </p>
             </div>
             <div class="content-box b4">
@@ -21,35 +20,32 @@
             <Projects :projects="projects"></Projects>
             <Contacts :contacts="contacts"></Contacts>
         </div>
-    </div>
+    </div> -->
 </template>
 
 <script>
-import api from "../../api";
-import Projects from "../Projects";
-import Skills from "../Skills";
-import Contacts from "../Contacts";
+
 export default {
-  name: "HomePage",
+  name: 'HomePage',
   components: {
     Projects,
     Skills,
     Contacts
   },
-  data() {
+  data () {
     return {
-      projects: "",
-      contacts: "",
-      sections: ""
-    };
+      projects: '',
+      contacts: '',
+      sections: ''
+    }
   },
-  created() {
-    this.skills = api.skills;
-    this.contacts = api.contacts;
-    this.projects = api.projects;
-    this.sections = api.sections;
+  created () {
+    this.skills = api.skills
+    this.contacts = api.contacts
+    this.projects = api.projects
+    this.sections = api.sections
   }
-};
+}
 </script>
 
 <style lang="scss">

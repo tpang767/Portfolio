@@ -2,13 +2,14 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import store from './store';
-import VueScrollTo from 'vue-scrollto'
+import store from './store'
+import VueScrollactive from 'vue-scrollactive'
+import CustomPropertiesParallax from 'vue-custom-properties-parallax'
 
-Vue.use(VueScrollTo)
+Vue.use(CustomPropertiesParallax)
+Vue.use(VueScrollactive)
 // External Lib
 import 'animate.css/animate.min.css'
-
 
 /* eslint-disable no-new */
 new Vue({
